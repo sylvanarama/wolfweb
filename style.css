@@ -3,7 +3,8 @@
 
 :root {
   --main-bg-color: white;
-  --dark-accent-color: #1b0404;
+  /* --dark-accent-color: #1b0404; */
+  --dark-accent-color: rgba(47,24,24,1);
   --light-accent-color: #FFFFFF;
 }
 * {
