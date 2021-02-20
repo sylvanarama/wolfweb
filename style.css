@@ -212,6 +212,9 @@ h1 {
   background-color: var(--dark-accent-color);
   padding: 3vw;
   max-height:1000px;
+  align-content: center;
+  justify-content: space-evenly;
+  justify-items: center;
 }
 
 .spacer {
