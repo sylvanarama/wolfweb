@@ -150,7 +150,7 @@ align-items: center; */
 .dropdown-content {
   display: block;
   position: relative;
-  background-color: rgba(27,4,4,0.95);
+  background-color: rgba(45,6,8,0.95);
   text-align: left;
   padding: 0.1em;
   z-index:1000;
@@ -202,19 +202,33 @@ h1 {
   display:block;
   z-index:1;
   position: relative;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  background-color: var(--dark-accent-color);
 }
 
-.container {
+.flex-container {
   position: relative;
   display: flex;
   flex-direction: row;
   text-align: center;
-  background-color: var(--dark-accent-color);
+  /* background-color: var(--dark-accent-color); */
   padding: 3vw;
   max-height:1000px;
   align-content: center;
-  justify-content: space-evenly;
-  justify-items: center;
+  justify-content: center;
+  justify-items: space-between;
+}
+
+.flex-item {
+  display: flex;
+  flex: 1 1 30%;
+  position: relative;
+  padding: 1rem;
+  background-color: rgba(255, 255, 255, 0.3);
+  justify-content: center;
+  align-items:center;
+  margin:1rem;
 }
 
 .spacer {
@@ -231,7 +245,7 @@ h1 {
   justify-content: center;
 }
 
-.container img {
+.flex-container img {
   position: relative;
   max-width: 100%;
   height: auto;
@@ -276,7 +290,7 @@ h1 {
 
 /* Responsive layout - makes a one column-layout instead of two-column layout */
 @media (max-width: 800px) {
-  .container {
+  .flex-container {
     position: relative;
     flex-direction: column;
     justify-content: flex-start;
