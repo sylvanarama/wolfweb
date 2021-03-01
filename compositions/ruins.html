@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>WOLF EDWARDS</title>
+    <link rel="stylesheet" href="../style.css">
+    <meta charset="utf-8"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="../green-audio-player/dist/css/green-audio-player.css">
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+  </head>
+
+  <body>
+    <div id="siteWrapper" class="site-wrapper">
+        <div id="content-wrap">
+            <header>
+                <div class="menu-bar">     
+                    <div class="header-inner">     
+
+                        <div class="logo">Wolf Edwards</div>
+                        
+                        <div class="menu"> 
+                            <div class="header-nav-list">   
+                            <div class="header-nav-item"><a href="../index.html">Home</a></div>
+                            <div class="header-nav-item"><a href="../about.html">About</a></div>
+                            <div class="header-nav-item"><a href="../compositions.html">Compositions</a></div>
+                            <div class="header-nav-item"><a href="../recordings.html">Recordings</a></div>
+                            <div class="header-nav-item"><a href="../events.html">News & Events</a></div>
+                            <div class="header-nav-item"><a href="../cv.html">CV</a></div>
+                            <div class="header-nav-item"><a href="../contact.html">Contact</a></div>
+                            </div>
+                        </div>
+
+                        <div class="dropdown">
+                            <div class="dropbtn">
+                            <img src="http://i.stack.imgur.com/Fw96Z.png" alt="MENU" height="30">
+                            </div> 
+                        </div>
+                    
+                    </div>
+
+                    <div class="dropdown-content">
+                    <a href="../index.html">Home</a>
+                    <a href="../about.html">About</a>
+                    <a href="../compositions.html">Compositions</a>
+                    <a href="../recordings.html">Recordings</a>
+                    <a href="../events.html">News & Events</a>
+                    <a href="../cv.html">CV</a>
+                    <a href="../contact.html">Contact</a>
+                    </div> 
+                    
+                </div>
+
+
+                <div class="jumbotron">
+                    <div class="page-title">Compositions</div>
+                </div>
+
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+                <script src="../script.js"></script>
+
+            </header>
+
+            <div class="flex-container" id="comp-desc">
+                <div class="flex-column">    
+                    <h1>RUINS</h1>
+                    <p>
+                        Medium: Violoncello Quartet<br>
+                        Composed: 2008<br>
+                        Duration: circa 8′<br>
+                        Commissioned by: Sul Ponticello Violoncello Quartet, non-funded<br>
+                        Premiered: 23/11/2008 Chapelle Historique, Montreal, QC, by Sul Ponticello
+                    </p>
+                </div>
+                <div class="flex-column" id="recording-column">
+                    <!-- <div class="flex-item"><div class="spacer"></div></div> -->
+                    <div class="flex-item">
+                        <iframe width="100%" height="40%" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/92379303&color=%23232323&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
+                        <div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;">
+                            <a href="https://soundcloud.com/blackbough" title="blackbough" target="_blank" style="color: #cccccc; text-decoration: none;"></a>  
+                            <a href="https://soundcloud.com/blackbough/wolf-edwards-ruins-demo" title="Wolf Edwards - Ruins (demo) - Performed by Mark Molnar" target="_blank" style="color: #cccccc; text-decoration: none;"></a>
+                        </div>
+                    </div>
+                    <div class=flex-item>
+                        <div class="ready-player-1">
+                            <audio crossorigin preload="none">
+                                <source src="../audio/ruins-wolf-edwards.wav" type="audio/wav">
+                            </audio>
+                        </div>
+                    
+                        <script src="../green-audio-player/dist/js/green-audio-player.js"></script>
+                        <script>
+                            document.addEventListener('DOMContentLoaded', function() {
+                                new GreenAudioPlayer('.ready-player-1', { showTooltips: true, showDownloadButton: false, enableKeystrokes: false});
+                            });
+                        </script>
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="flex-container" id="score">
+
+                <div class="gallery js-flickity" data-flickity-options='{ "wrapAround": true }'>
+                    <div class="gallery-cell"></div>
+                    <div class="gallery-cell"></div>
+                    <div class="gallery-cell"></div>
+                    <div class="gallery-cell"></div>
+                    <div class="gallery-cell"></div>
+                </div>
+            </div>
+
+        </div>
+
+        <footer id="footer">
+            <div class="flex-row">
+                <div class="logo">Wolf Edwards</div>
+                <div>wolf.edwards.composer@gmail.com</div>
+            </div>
+        </footer>
+
+    </div>
+  </body>
+</html>
+

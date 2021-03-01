@@ -1,0 +1,159 @@
+
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  .responsive {
+    float:left;
+    width: 29.333333%;
+    margin: 2%;
+  }
+
+  div.gallery img {
+    width: 100%;
+    display: block;
+  }
+
+  div.gallery a {
+      padding:0;
+  }
+  
+
+  
+  .clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+
+  .gallery {
+    position: relative;
+    width: 100%;
+  }
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 1;
+    transition: .5s ease;
+    background-color: rgba(200,200,200,0.55);
+  }
+
+  .gallery:hover .overlay {
+    opacity: 0;
+  }
+
+  .text {
+    font-size: calc((3.3 - 1) * 1.2vh + 1rem);
+    line-height: calc((3.3 - 1) * 1.2vh + 1rem);
+    font-family:"Athelas Arabic";
+    text-transform: uppercase;
+    font-weight:600;
+    color:rgb(37, 4, 4);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+
+  .flex-item-gallery{
+    display: flex;
+    flex: 1 0 25%;
+    position: relative;
+    justify-content: center;
+    align-items:center;
+    margin: 2vw;
+    flex-wrap:wrap;
+    min-width: 205px;
+    max-width: 30%;
+  }
+  
+  .flex-item-gallery img {
+    display: block;
+  }
+  
+  .flex-item-gallery a {
+    padding:0;
+  }
+  
+  #chains {
+    background-image: url('images/Chains\ pg3_1.png');
+  }
+  
+  #chains img {
+    height: 300px;
+    width: 450px;
+  }
+  
+  #death {
+    background-image: url('images/Chains\ pg3_1.png');
+  }
+  
+  #road {
+    background-image: url('images/Chains\ pg3_1.png');
+  }
+  
+  .overlay-text {
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    
+    font-size: calc((3.3 - 1) * 1.2vh + 1rem);
+    line-height: calc((3.3 - 1) * 1.2vh + 1rem);
+    font-family:"Athelas Arabic";
+    text-transform: uppercase;
+    font-weight:600;
+    
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+  
+    opacity: 1;
+    transition: .4s ease;
+  
+    background-color: rgba(200,200,200,0.55);
+    color:rgb(37, 4, 4);
+  
+  }
+  
+  .overlay-text:hover {
+    opacity: 0;
+  }
+
+  @media only screen and (max-width: 700px) {
+    .responsive {
+      width: 46%;
+    }
+    .flex-item-gallery {
+        flex: 1 1 40%;
+    }
+    #gallery .flex-container {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+  }
+  
+  @media only screen and (max-width: 500px) {
+    .responsive {
+      width: 96%;
+    }
+    #gallery .flex-container {
+        flex: 1 1 100%;
+        flex-direction:column;
+        justify-content: flex-start;
+    }
+  }

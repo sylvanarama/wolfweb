@@ -1,0 +1,35 @@
+
+  #home-page .flex-column{
+      color: rgb(200,200,200);
+      height:100%;
+      min-height: 50vw;
+  }
+  
+  #home-page h2 {
+    letter-spacing: 0.2em;
+    width:100%;
+  }
+
+  #home-page .menu-bar {
+    background-color: rgba(0,0,0,0.6) !important;
+  }
+
+  #home-page .item-right img {
+    width: 100%;
+    text-align:center;
+    padding: 2rem;
+  }
+
+  #home-page .item-left {
+    flex: 1 0 35%;
+    max-width: 500px;
+  }
+#home-page .item-right {
+    flex: 1 1 25%;
+    max-width: 450px;
+}
+
+
+  #home-page .flex-container {
+      justify-content: center;
+  }
