@@ -8,8 +8,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="../green-audio-player/dist/css/green-audio-player.css">
-    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
-    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+    <!-- <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css"> -->
+    <link rel="stylesheet" href="https://npmcdn.com/flickity@2/dist/flickity.css">
+    <!-- <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script> -->
+    <script src="https://npmcdn.com/flickity@2/dist/flickity.pkgd.js"></script>
   </head>
 
   <body>
@@ -101,15 +103,42 @@
                 </div>
             </div>
 
-            <div class="flex-container" id="score">
+            <div class="content-wrapper" id="score">
 
-                <div class="gallery js-flickity" data-flickity-options='{ "wrapAround": true }'>
-                    <div class="gallery-cell"></div>
-                    <div class="gallery-cell"></div>
-                    <div class="gallery-cell"></div>
-                    <div class="gallery-cell"></div>
-                    <div class="gallery-cell"></div>
+                <div class="carousel carousel-main" data-flickity>
+                    <div class="gallery-cell">    
+                        <img src="../images/scores/ruins/ruins-score_1.png" />
+                    </div>
+                    <div class="gallery-cell">
+                        <img src="../images/scores/ruins/ruins-score_2.png" />
+                    </div>
+                    <div class="gallery-cell">
+                        <img src="../images/scores/ruins/ruins-score_3.png" />
+                    </div>
+                    <div class="gallery-cell">
+                        <img src="../images/scores/ruins/ruins-score_4.png" />
+                    </div>
+                    <div class="gallery-cell">
+                        <img src="../images/scores/ruins/ruins-score_5.png" />
+                    </div>
+                    <div class="gallery-cell">
+                        <img src="../images/scores/ruins/ruins-score_6.png" />
+                    </div>
+                    <div class="gallery-cell">
+                        <img src="../images/scores/ruins/ruins-score_7.png" />
+                    </div>
                 </div>
+            </div>
+
+
+            <div class="carousel carousel-nav" data-flickity='{ "asNavFor": ".carousel-main", "contain": true, "pageDots": false}'>
+                <div class="carousel-cell"><img src="../images/scores/ruins/ruins-score_1.png" /></div>
+                <div class="carousel-cell"><img src="../images/scores/ruins/ruins-score_2.png" /></div>
+                <div class="carousel-cell"><img src="../images/scores/ruins/ruins-score_3.png" /></div>
+                <div class="carousel-cell"><img src="../images/scores/ruins/ruins-score_4.png" /></div>
+                <div class="carousel-cell"><img src="../images/scores/ruins/ruins-score_5.png" /></div>
+                <div class="carousel-cell"><img src="../images/scores/ruins/ruins-score_6.png" /></div>
+                <div class="carousel-cell"><img src="../images/scores/ruins/ruins-score_7.png" /></div>
             </div>
 
         </div>

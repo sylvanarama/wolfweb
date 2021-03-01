@@ -49,23 +49,96 @@ iframe {
 }
 
 .gallery {
-  background: #EEE;
+  background: black;
+  display:block;
 }
 
 .gallery-cell {
-  width: 66%;
-  height: 200px;
-  margin-right: 10px;
-  background: #8C8;
+  width: 90%;
+  padding-left:5%;
+  padding-right:5%;
+  height: fit-content;
+  margin-right: 2vw;
   counter-increment: gallery-cell;
+  background-color: black;
 }
 
-/* cell number */
-.gallery-cell:before {
-  display: block;
-  text-align: center;
-  content: counter(gallery-cell);
-  line-height: 200px;
-  font-size: 80px;
-  color: white;
-}
+.carousel {
+    background: black;
+    padding-bottom: 5vmin;
+  }
+
+  .carousel-nav {
+    background: black;
+    padding:5vmin;
+  }
+  
+  .carousel-cell {
+    width: 100%;
+    height: 200px;
+    background:black;
+    counter-increment: carousel-cell;
+  }
+  
+  .carousel-nav .carousel-cell {
+    width: 20%;
+    height: auto;
+    padding:1vw;
+    margin-right:1vw;
+  }
+
+  .carousel-cell:after {
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    content: counter(carousel-cell);
+    line-height: 200px;
+    font-size: 80px;
+    color: black;
+
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+  }
+  
+  .carousel-nav .carousel-cell:after {
+    font-size: 5vmin;
+    line-height: 100%;
+  }
+  
+  .carousel-nav .carousel-cell.is-nav-selected {
+    background:  rgb(37, 4, 4);
+  }
+
+  .carousel img {
+    display: block;
+    max-width:100%;
+  }
+
+
+/* big buttons, no circle */
+.flickity-prev-next-button {
+    width: 100px;
+    height: 100px;
+    background: transparent !important;
+  }
+  /* arrow color */
+  .flickity-prev-next-button .arrow {
+    fill: white;
+  }
+  .flickity-prev-next-button.no-svg {
+    color: white;
+  }
+  .flickity-prev-next-button:hover {
+    background: transparent;
+  }
+  /* hide disabled button */
+  .flickity-prev-next-button:disabled {
+    display: none;
+  }
+  
+  
