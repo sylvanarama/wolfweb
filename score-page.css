@@ -65,13 +65,32 @@ iframe {
 
 .carousel {
     background: black;
-    padding-bottom: 5vmin;
+    margin-bottom: 5vmin;
+
   }
 
-  .carousel-nav {
-    background: black;
-    padding:5vmin;
+  .carousel-medium .carousel-cell {
+      width: 20%;
   }
+
+  .carousel-medium .carousel-cell:before{
+    display: none;
+}
+
+  .carousel-nav {
+    width: 80%;
+    float:center;
+    background: black;
+    margin: 0 auto;
+    /* padding:3vmin; */
+  }
+
+.carousel-nav .flickity-prev-next-button.previous {
+    left: -5vw !important;
+}
+.carousel-nav .flickity-prev-next-button.next {
+    right: -5vw !important;
+}
   
   .carousel-cell {
     width: 100%;
@@ -140,5 +159,46 @@ iframe {
   .flickity-prev-next-button:disabled {
     display: none;
   }
+
+  /* white circles */
+.flickity-page-dots .dot {
+    width: 12px;
+    height: 12px;
+    opacity: 1;
+    background: rgb(100,100,100) !important;
+  }
+  /* fill-in selected dot */
+  .flickity-page-dots .dot.is-selected {
+    background: rgb(200, 200, 200) !important;
+  }
+
+  @media only screen and (max-width: 700px) {
+    /* position outside */
+    .flickity-prev-next-button.previous {
+        left: -1vw !important;
+    }
+    .flickity-prev-next-button.next {
+        right: -1vw !important;
+    }
+    .carousel-nav .flickity-prev-next-button.previous {
+        left: -7vw !important;
+    }
+    .carousel-nav .flickity-prev-next-button.next {
+        right: -7vw !important;
+    }
+  }
   
+  
+  @media only screen and (max-width: 540px) {
+    .carousel-nav {
+        display:none;
+    }
+    /* position outside */
+    .flickity-prev-next-button.previous {
+        left: -2vw !important;
+    }
+    .flickity-prev-next-button.next {
+        right: -2vw !important;
+    }
+  }
   

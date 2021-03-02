@@ -6,7 +6,7 @@ header {
   .menu-bar {
     font-family: 'Athelas Arabic', sans-serif;
     background-color: var(--dark-accent-color);
-    color: rgb(200,200,200);
+    color: white;
   
     position: relative;
     z-index: 0;
@@ -105,7 +105,7 @@ header {
   
   /* Links inside the dropdown */
   .dropdown-content a {
-  color: rgb(200,200,200);
+  color: white;
   font-size:1.1rem;
   padding: 0.5rem 2rem;
   text-decoration: none;
@@ -146,7 +146,7 @@ header {
     padding: 1rem;
     width:100%;
     height: 100%;
-    background-color: rgba(200, 200, 200, 0.65);
+    background-color: rgba(255, 255, 255, 0.65);
   
     color: var(--dark-accent-color);
     text-transform: uppercase;

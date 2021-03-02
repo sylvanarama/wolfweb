@@ -1,6 +1,10 @@
 
+@import url('compositions.css'); 
+@import url("fonts/ivymode.css");
+@import url("fonts/athelas.css");
+  
   #home-page .flex-column{
-      color: rgb(200,200,200);
+      color: white;
       height:100%;
       min-height: 50vw;
   }
@@ -33,3 +37,94 @@
   #home-page .flex-container {
       justify-content: center;
   }
+
+  #content-summary {
+    background: black;
+  }
+
+  #content-summary .more-btn{
+    padding: 0.5vmin 2vmin;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    position: absolute;
+    right:3vmin;
+    bottom:2vmin;
+    /* margin: 4px 2px; */
+    cursor: pointer;
+
+    text-decoration:none;
+    background-color:black;
+    color: white;
+    font-family: "Ivy Mode";
+    font-size:2.5vmin;
+    border: 2px solid white;
+    z-index:10;
+
+  }
+
+  #content-summary .more-btn:hover{
+    background: white;
+    color:black;
+    font-weight:bold;
+  }
+
+  .event {
+    /* background: rgb(37, 4, 4); */
+    /* background:rgba(255,255,255,0.1); */
+    background: black;
+    border-radius: 0;
+    color: white !important;
+    font-size: 2.5vmin;
+    line-height: 3vmin;
+    font-weight:lighter;
+    font-family: "Ivy Mode";
+    text-align:center;
+    text-decoration: none !important;
+    border:2px solid white;
+
+  }
+
+  #content-summary .event-btn{
+    position:relative;
+    display:block;
+    padding:3vmin 3vmin;
+    text-decoration: none !important;
+    color:white;
+  }
+
+  #content-summary .event-btn:hover{
+    background: rgba(100,100,100,.5);
+  }
+
+  #content-summary h2 {
+    font-weight:normal;
+    text-align: left;
+    letter-spacing: 0.1em;
+    font-family: 'Ivy Mode';
+    font-size: 2vw;
+  }
+
+  .flickity-page-dots {
+    display:none;
+  }
+
+  @media only screen and (max-width: 700px) {
+    .event{
+      width:40%;
+      font-size: 3.5vmin;
+      line-height: 4vmin;
+    }
+  }
+  
+  
+  @media only screen and (max-width: 540px) {
+    .event{
+      width:80%;
+      font-size: 4.5vmin;
+      line-height: 5vmin;
+    }
+  }
+
+
+
