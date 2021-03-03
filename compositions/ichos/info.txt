@@ -1,0 +1,10 @@
+* title: Ichos
+* category: string quartet
+* medium: string quartet
+* date: 2004
+* duration: 8
+* commission: 
+* performances: 
+Premiered 11/07/2005, Salle de l’Esplanade, Festival Acanthes, Metz, France, Arditti String Quartet
+Subsequent Performances: 19/08/2007, Schloss Solitude, Stuttgart, Germany, Ensemble Surplus
+* notes: 

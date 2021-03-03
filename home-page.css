@@ -102,7 +102,7 @@
     text-align: left;
     letter-spacing: 0.1em;
     font-family: 'Ivy Mode';
-    font-size: 2vw;
+    font-size: 4vmin;
   }
 
   .flickity-page-dots {
@@ -115,6 +115,9 @@
       font-size: 3.5vmin;
       line-height: 4vmin;
     }
+    #content-summary h2 {
+      font-size: 5vmin;
+    }
   }
   
   
@@ -123,6 +126,9 @@
       width:80%;
       font-size: 4.5vmin;
       line-height: 5vmin;
+    }
+    #content-summary h2 {
+      font-size: 6vmin;
     }
   }
 

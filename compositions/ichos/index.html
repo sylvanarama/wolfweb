@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>WOLF EDWARDS</title>
+    <link rel="stylesheet" href="../../style.css">
+    <link rel="stylesheet" href="../../score-page.css">
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="../../green-audio-player/dist/css/green-audio-player.css">
+    <link rel="stylesheet" href="https://npmcdn.com/flickity@2/dist/flickity.css">
+    <script src="https://npmcdn.com/flickity@2/dist/flickity.pkgd.js"></script>
+
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/tabletop.js/1.5.1/tabletop.min.js'></script>
+    <script src="../../auto-fill.js"></script>
+
+  </head>
+
+  <body>
+    <div id="siteWrapper" class="site-wrapper">
+        <div id="content-wrap">
+            <header>
+                <div class="menu-bar">     
+                    <div class="header-inner">     
+
+                        <div class="logo">Wolf Edwards</div>
+                        
+                        <div class="menu"> 
+                            <div class="header-nav-list">   
+                            <div class="header-nav-item"><a href="../../index.html">Home</a></div>
+                            <div class="header-nav-item"><a href="../../about.html">About</a></div>
+                            <div class="header-nav-item"><a href="../../compositions.html">Compositions</a></div>
+                            <div class="header-nav-item"><a href="../../recordings.html">Recordings</a></div>
+                            <div class="header-nav-item"><a href="../../events.html">News & Events</a></div>
+                            <div class="header-nav-item"><a href="../../cv.html">CV</a></div>
+                            <div class="header-nav-item"><a href="../../contact.html">Contact</a></div>
+                            </div>
+                        </div>
+
+                        <div class="dropdown">
+                            <div class="dropbtn">
+                            <img src="http://i.stack.imgur.com/Fw96Z.png" alt="MENU" height="30">
+                            </div> 
+                        </div>
+                    
+                    </div>
+
+                    <div class="dropdown-content">
+                    <a href="../../index.html">Home</a>
+                    <a href="../../about.html">About</a>
+                    <a href="../../compositions.html">Compositions</a>
+                    <a href="../../recordings.html">Recordings</a>
+                    <a href="../../events.html">News & Events</a>
+                    <a href="../../cv.html">CV</a>
+                    <a href="../../contact.html">Contact</a>
+                    </div> 
+                    
+                </div>
+
+
+                <div class="jumbotron">
+                    <div class="page-title">Compositions</div>
+                </div>
+
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+                <script src="../../script.js"></script>
+
+            </header>
+
+            <div class="flex-container" id="comp-desc">
+                <div class="flex-column">    
+                    <h1 id="title"></h1>
+                    <div id="info">
+                        <div id="date"></div>
+                        <!-- <div id="duration"></div> -->
+                        <!-- <div id="category"></div> -->
+                        <div id="medium"></div>
+                        <div id="performances"></div>
+                        <div id="commission"></div>
+                        <div id="funding"></div>
+                        <div id="notes"></div>
+                    </div>
+
+                </div>
+                <div class="flex-column" id="recording-column">
+
+                    <script>
+                        var folder = "recordings/";
+                        $.ajax({
+                            url : folder,
+                            success: function (data) {
+                                $(data).find("a").attr("href", function (i, val) {
+                                    if( val.match(/\.(mp3|wav|mp4)$/) ) { 
+                                        $("body").append( 
+                                            "<div class='flex-item'><audio crossorigin preload='none'><source src='" + folder + val + "' type='audio/mpeg'></audio></div>"
+                                        );
+                                    } 
+                                });
+                            }
+                        });
+                    </script>
+
+                    <div class=flex-item>
+                        <div class="ready-player-1">
+                            <audio crossorigin preload="none">
+                                <source src="recordings/ichos.mp4" type="audio/mpeg">
+                            </audio>
+                        </div>
+                    
+                        <script src="../../green-audio-player/dist/js/green-audio-player.js"></script>
+                        <script>
+                            document.addEventListener('DOMContentLoaded', function() {
+                                new GreenAudioPlayer('.ready-player-1', { showTooltips: true, showDownloadButton: false, enableKeystrokes: false});
+                            });
+                        </script>
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="content-wrapper" id="score">
+
+                <div class="carousel carousel-main" id="main-carousel" data-flickity>
+                    
+                    <script>
+                        var folder = "score/";
+                        $.ajax({
+                            url : folder,
+                            success: function (data) {
+                                $(data).find("a").attr("href", function (i, val) {
+                                    if( val.match(/\.(jpe?g|png|gif)$/) ) { 
+                                        $("body").append( 
+                                            "<div class='gallery-cell'><img src='" + folder + val + "'></div>"
+                                        );
+                                    } 
+                                });
+                            }
+                        });
+                    </script>
+
+                </div>
+            
+
+
+                <div class="carousel carousel-nav" id="nav-carousel" data-flickity='{ "asNavFor": ".carousel-main", "contain": true, "pageDots": false}'>
+
+                    <script>
+                        var folder = "score/";
+                        $.ajax({
+                            url : folder,
+                            success: function (data) {
+                                $(data).find("a").attr("href", function (i, val) {
+                                    if( val.match(/\.(jpe?g|png|gif)$/) ) { 
+                                        $("body").append( 
+                                            "<div class='carousel-cell'><img src='" + folder + val + "'></div>"
+                                        );
+                                    } 
+                                });
+                            }
+                        });
+                    </script>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <footer id="footer">
+            <div class="flex-row">
+                <div class="logo">Wolf Edwards</div>
+                <div>wolf.edwards.composer@gmail.com</div>
+            </div>
+        </footer>
+
+    </div>
+  </body>
+</html>
+
