@@ -2,8 +2,8 @@
 <html>
   <head>
     <title>WOLF EDWARDS</title>
-    <link rel="stylesheet" href="../../style.css">
-    <link rel="stylesheet" href="../../score-page.css">
+    <link rel="stylesheet" href="../../styles/style.css">
+    <link rel="stylesheet" href="../../styles/score-page.css">
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="../../green-audio-player/dist/css/green-audio-player.css">
@@ -11,7 +11,7 @@
     <script src="https://npmcdn.com/flickity@2/dist/flickity.pkgd.js"></script>
 
     <script src='https://cdnjs.cloudflare.com/ajax/libs/tabletop.js/1.5.1/tabletop.min.js'></script>
-    <script src="../../auto-fill.js"></script>
+    <script src="../../scripts/auto-fill.js"></script>
 
   </head>
 
@@ -62,7 +62,7 @@
                 </div>
 
                 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
-                <script src="../../script.js"></script>
+                <script src="../../scripts/script.js"></script>
 
             </header>
 
@@ -83,8 +83,8 @@
                 </div>
                 <div class="flex-column" id="recording-column">
 
-                    <script>
-                        var folder = "recordings/";
+                    <!-- <script>
+                        var folder = "/recordings/";
                         $.ajax({
                             url : folder,
                             success: function (data) {
@@ -98,6 +98,26 @@
                             }
                         });
                     </script>
+
+                    <script type="text/javascript">
+
+                        var dir = "/recordings/";
+                        var fileextension = ".mp3";
+                    $(document).ready(function(){
+                        $.ajax({
+                            url: dir,
+                            success: function (data) {
+                                $(data).find("a:contains(" + fileextension + ")").each(function () {
+                                    var filename = this.href.replace(window.location.host, "").replace("http://", "");
+                                    console.log(filename);
+                                    $("body").append( 
+                                            "<div class='flex-item'><audio crossorigin preload='none'><source src='" + dir + filename + "' type='audio/mpeg'></audio></div>"
+                                    );
+                                });
+                            }
+                        });
+                    });
+                    </script> -->
 
                     <div class=flex-item>
                         <div class="ready-player-1">
@@ -121,8 +141,8 @@
 
                 <div class="carousel carousel-main" id="main-carousel" data-flickity>
                     
-                    <script>
-                        var folder = "score/";
+                    <!-- <script>
+                        var folder = "/Users/Maddie/workspace/wolfweb/compositions/ichos/score/";
                         $.ajax({
                             url : folder,
                             success: function (data) {
@@ -135,16 +155,43 @@
                                 });
                             }
                         });
+                    </script> -->
+
+                    <script>
+
+                        const http = require('http') // To use the HTTP interfaces in Node.js
+                        const fs = require('fs') // For interacting with the file system
+                        const path = require('path') // For working with file and directory paths
+                        const url = require('url') // For URL resolution and parsing
+
+                        var dir = "/score/";
+                        var fileextension = ".png";
+                        $(document).ready(function(){
+                                $.ajax({
+                                    url: dir,
+                                    success: function (data) {
+                                        $(data).find("a:contains(" + fileextension + ")").each(function () {
+                                            var filename = this.href.replace(window.location.host, "").replace("http://", "");
+                                            console.log(filename);
+                                            $("body").append( 
+                                                "<div class='gallery-cell'><img src='" + dir + filename + "'></div>"
+                                            );
+                                        });
+                                    }
+                                });
+                        });
                     </script>
 
                 </div>
+
+
             
 
 
                 <div class="carousel carousel-nav" id="nav-carousel" data-flickity='{ "asNavFor": ".carousel-main", "contain": true, "pageDots": false}'>
 
-                    <script>
-                        var folder = "score/";
+                    <!-- <script>
+                        var folder = "/Users/Maddie/workspace/wolfweb/compositions/ichos/score/";
                         $.ajax({
                             url : folder,
                             success: function (data) {
@@ -157,7 +204,7 @@
                                 });
                             }
                         });
-                    </script>
+                    </script> -->
 
                 </div>
 
