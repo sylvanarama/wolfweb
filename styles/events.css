@@ -18,13 +18,13 @@
 }
 
 .title {
-    font-size: clamp(20px, 6vw, 40px);
+    font-size: clamp(20px, 6vw, 35px);
     align-self:center;
     margin-right:1em;
 }
 
 .sub-title {
-    font-size: clamp(15px, 5vw, 30px);
+    font-size: clamp(15px, 5vw, 25px);
     font-weight:lighter;
 }
 
@@ -67,3 +67,24 @@ p {
 a {
     text-decoration: underline;
 }
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top:clamp(8px, 1vw, 20px);
+    margin-bottom:clamp(8px, 1vw, 20px);
+    width:100%;
+    max-width:1023px;
+  }
+
+  .caption {
+    font-style: italic;
+    font-family:'Raleway';
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: inherit;
+    text-align: center;
+    margin-top:clamp(8px, 1vw, 20px);
+  }
