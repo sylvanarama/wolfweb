@@ -87,6 +87,8 @@ body {
   justify-content: flex-start;
   justify-items:center;
   height:100%;
+  /* padding:1.5vw;
+  margin:1.5vw; */
 
 }
 
@@ -210,8 +212,8 @@ h5 {
 }
 
 p {
-  margin: 1em 1vw;
-  padding:1em;
+  /* margin: 1em 1vw;
+  padding:1em; */
   min-width:45%;
   align-self: left;
   font-weight: 100;
@@ -219,7 +221,7 @@ p {
   font-size: 0.9rem;
   line-height:1.6rem;
   text-align:left;
-  background-color: rgba(0,0,0,0.6);
+  /* background-color: rgba(0,0,0,0.6); */
   
 }
 
@@ -296,7 +298,7 @@ a:hover {
 
 @media (max-width: 540px) {
   p {
-    margin: 1em 6vw;
+    /* margin: 1em 6vw; */
   }
   ul {
     margin: 1em 6vw;
