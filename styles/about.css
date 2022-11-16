@@ -1,0 +1,21 @@
+.right-img {
+    float: right;
+    padding: 0;
+    padding-left: clamp(10px, 5vw, 30px);
+    padding-bottom: clamp(10px, 5vw, 30px);
+    width: clamp(200px, 50%, 703px);
+    height:100%;
+    object-fit: contain;
+   }
+
+   .content-with-image {
+    background-color: rgba(0,0,0,0.6);
+    padding:2vw;
+    max-width:1300px;
+    margin:auto;
+   }
+
+   p {
+    margin-top:0;
+    text-align: left;
+   }
